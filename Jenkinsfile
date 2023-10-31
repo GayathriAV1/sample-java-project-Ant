@@ -1,4 +1,3 @@
-# Jenkins with GitHub Integration Pipeline Example
 pipeline {
   agent any
   stages {
