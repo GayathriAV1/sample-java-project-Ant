@@ -4,7 +4,7 @@ pipeline {
     stage('GitHub Jenkins Ant Build') {
       steps {
         git 'https://github.com/GayathriAV1/sample-java-project-Ant.git'
-        bash 'ant clean compile test package war'
+        bat 'ant clean compile test package war'
       }
     }
   }
