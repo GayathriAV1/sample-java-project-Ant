@@ -31,8 +31,6 @@
         <!-- note: due to FindBugs BCEL conflict, list PMD last. -->
     <dependency org="net.sourceforge.pmd" name="pmd" rev="5.0.0"
                 conf="analysis->default"/>
-    <dependencies>
   	<dependency org="org.projectlombok" name="lombok" rev="1.18.30" conf="build->master"/>
-</dependencies>
   </dependencies>
 </ivy-module>
