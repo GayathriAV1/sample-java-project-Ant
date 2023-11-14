@@ -31,7 +31,6 @@
            optimize="on" debug="on" deprecation="on" includeantruntime="no">
       <compilerarg value="-Xlint"/>
       <classpath refid="build.classpath"/>
-      <classpath location="lib/lombok.jar"/>
     </javac>
     <copy todir="${build.dir}/classes">
       <fileset dir="${src.dir}" excludes="**/*.java"/>
@@ -168,7 +167,6 @@
       <compilerarg value="-Xlint"/>
       <classpath refid="build.classpath"/>
       <classpath refid="test.classpath"/>
-      <classpath location="lib/lombok.jar" />
     </javac>
     <copy todir="${build.dir}/test">
       <fileset dir="${test.dir}" excludes="**/*.java"/>
