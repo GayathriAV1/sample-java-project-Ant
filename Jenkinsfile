@@ -7,5 +7,11 @@ pipeline {
         bat 'ant compile'
       }
     }
+  stage('SonarQube Analysis') {
+    def scannerHome = tool 'MySonarScanner';
+    withSonarQubeEnv() {
+      sh "${scannerHome}/bin/sonar-scanner"
+    }
+  }
   }
 }
