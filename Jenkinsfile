@@ -6,6 +6,11 @@ pipeline {
         git 'https://github.com/GayathriAV1/sample-java-project-Ant.git'
       }
     }
+    stage('Compile') {
+    steps{
+      bat 'ant compile'
+    }
+  }
   stage('SonarQube Analysis') {
     steps{
       script{
@@ -14,11 +19,6 @@ pipeline {
       bat "${scannerHome}/bin/sonar-scanner"
     }
     }
-    }
-  }
-  stage('Compile') {
-    steps{
-      bat 'ant compile'
     }
   }
   }
