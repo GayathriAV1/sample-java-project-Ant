@@ -6,6 +6,7 @@
   <loadproperties srcfile="project.properties"/>
   <property name="main.class" value="${package.main}.${ant.project.name}"/>
   <property name="base.name" value="${artifactId}-${version}"/>
+  <property name="sonar.java.binaries" value="target"/>
 
   <!-- Standard Directory Layout -->
   <property name="src.dir" value="src"/>
