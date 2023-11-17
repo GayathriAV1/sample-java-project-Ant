@@ -29,7 +29,7 @@ pipeline {
     stage('Server') {
     steps{
       rtServer {
-        id: "Artifactory",
+        id: "myJfrogServer",
         url: 'https://avg123.jfrog.io/',
         username: 'jenkinsuser1',
         password: 'Admin123'
