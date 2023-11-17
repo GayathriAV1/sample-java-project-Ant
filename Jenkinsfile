@@ -28,7 +28,7 @@ pipeline {
   }
     stage('Artifact upload') {
     steps{
-      rtUpload {
+      rtUpload (
         serverId: "myJfrogServer",
           spec: """{
               "files": [
@@ -37,10 +37,8 @@ pipeline {
                       "target": "my-sample-ivy-dev"
                   }
               ]
-          }"""
-
-        
-      }
+          }""" 
+      )
     }
   }
   }
