@@ -26,5 +26,16 @@ pipeline {
       bat 'ant jar'
     }
   }
+    stage('Server') {
+    steps{
+      rtServer {
+        id: "Artifactory",
+        url: 'https://avg123.jfrog.io/',
+        username: 'jenkinsuser1',
+        password: 'Admin123'
+        
+      }
+    }
+  }
   }
 }
