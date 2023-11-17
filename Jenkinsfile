@@ -26,13 +26,19 @@ pipeline {
       bat 'ant jar'
     }
   }
-    stage('Server') {
+    stage('Artifact upload') {
     steps{
-      rtServer {
-        id: "myJfrogServer",
-        url: 'https://avg123.jfrog.io/',
-        username: 'jenkinsuser1',
-        password: 'Admin123'
+      rtUpload {
+        serverId: "myJfrogServer",
+          spec: """{
+              "files": [
+                  {
+                      "pattern": "*.jar",
+                      "target": "my-sample-ivy-dev"
+                  }
+              ]
+          }"""
+
         
       }
     }
