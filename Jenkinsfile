@@ -21,5 +21,10 @@ pipeline {
     }
     }
   }
+    stage('Package') {
+    steps{
+      bat 'ant package'
+    }
+  }
   }
 }
