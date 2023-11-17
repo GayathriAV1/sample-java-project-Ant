@@ -23,7 +23,7 @@ pipeline {
   }
     stage('Package') {
     steps{
-      bat 'ant package'
+      bat 'ant jar'
     }
   }
   }
