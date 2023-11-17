@@ -42,7 +42,7 @@ pipeline {
                 jf 'rt ping'
 
                 // Create a file and upload it to a repository named 'my-repo' in Artifactory
-                bat 'New-Item test-file -ItemType File'
+                bat 'echo > test-file'
                 jf 'rt u test-file my-sample-ivy-dev/'
 
                 // Publish the build-info to Artifactory.
