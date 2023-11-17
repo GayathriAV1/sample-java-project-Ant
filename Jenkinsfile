@@ -26,10 +26,22 @@ pipeline {
       bat 'ant jar'
     }
   }
+    stage('Server') {
+    steps{
+      rtServer (
+        serverId: "Artifactory",
+        url: 'https://avg123.jfrog.io/artifactory',
+        username: 'jenkinsuser1'
+        password: 'Admin123'
+        bypassProxy: true,
+        timeout: 300
+      )
+    }
+  }
     stage('Artifact upload') {
     steps{
       rtUpload (
-        serverId: "myJfrogServer",
+        serverId: "Artifactory",
           spec: """{
               "files": [
                   {
