@@ -32,7 +32,7 @@ pipeline {
         serverId: "Artifactory",
         url: 'https://avg123.jfrog.io/artifactory',
         username: 'jenkinsuser1',
-        password: 'Admin123'
+        password: 'Admin123',
         bypassProxy: true,
         timeout: 300
       )
