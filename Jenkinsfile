@@ -15,16 +15,6 @@ pipeline {
                 bat 'ant compile'
             }
         }
-        stage('SonarQube Analysis') {
-            steps {
-                script {
-                    def scannerHome = tool 'MySonarScanner'
-                    withSonarQubeEnv() {
-                        bat "${scannerHome}/bin/sonar-scanner"
-                    }
-                }
-            }
-        }
         stage('Package') {
             steps {
                 bat 'ant jar'
@@ -43,7 +33,7 @@ pipeline {
 
                 // Create a file and upload it to a repository named 'my-repo' in Artifactory
                 bat 'echo > test-file'
-                jf 'rt u test-file my-sample-ivy-dev/'
+                jf 'rt u *.jar my-sample-ivy-dev/'
 
                 // Publish the build-info to Artifactory.
                 jf 'rt bp'
