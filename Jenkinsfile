@@ -30,7 +30,7 @@ pipeline {
                 jf 'rt bp'
 
                 //Jfrof Xray Scan
-                jfrog rt scan-build
+                bat 'jfrog rt scan-build'
 
             }
         }
