@@ -22,24 +22,13 @@ pipeline {
         }
         stage('Artifact upload') {
             steps {
-                   // Show the installed version of JFrog CLI.
-                jf '-v'
 
-                // Show the configured JFrog Platform instances.
-                jf 'c show'
-
-                // Ping Artifactory.
-                jf 'rt ping'
-
-                // Create a file and upload it to a repository named 'my-repo' in Artifactory
-                bat 'echo > test-file'
+                // Search for .jar file and upload it to the Artifactory repo
                 jf 'rt u *.jar my-sample-ivy-dev/'
 
                 // Publish the build-info to Artifactory.
                 jf 'rt bp'
 
-                // Download the test-file
-                jf 'rt dl my-repo/test-file'
             }
         }
     }
