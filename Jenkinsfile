@@ -30,8 +30,7 @@ pipeline {
                 jf 'rt bp'
 
                 //Jfrof Xray Scan
-              //  scanResult = Artifactory.xrayScan 
-             //   bat 'jfrog rt scan-build'
+               bat 'jfrog rt scan-build'
 
             }
         }
