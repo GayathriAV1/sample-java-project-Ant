@@ -29,6 +29,9 @@ pipeline {
                 // Publish the build-info to Artifactory.
                 jf 'rt bp'
 
+                //Jfrof Xray Scan
+                jf 'rt scan-build'
+
             }
         }
     }
