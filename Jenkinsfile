@@ -24,7 +24,7 @@ pipeline {
             steps {
 
                 // Search for .jar file and upload it to the Artifactory repo
-                jf 'rt u *.jar my-sample-ivy-dev/'
+                jf 'rt u *.jar my-sample-ivy-dev'
 
                 // Publish the build-info to Artifactory.
                 jf 'rt bp'
