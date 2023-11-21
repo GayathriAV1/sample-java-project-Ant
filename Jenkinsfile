@@ -30,8 +30,8 @@ pipeline {
                 jf 'rt bp'
 
                 //Jfrof Xray Scan
-                jf 's *.jar'
-                //jf 'bs'
+               // jf 's *.jar'
+                jf 'rt bs'
 
             }
         }
