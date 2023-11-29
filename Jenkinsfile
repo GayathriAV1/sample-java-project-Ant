@@ -27,7 +27,7 @@ pipeline {
              //   jf 'rt u *.jar testantproject'
 
                 // Publish the build-info to Artifactory.
-              //  jf 'rt bp'
+                jf 'rt bp'
 
                 //Jfrof Xray Scan
               //  jf 's *.jar'
